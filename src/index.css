@@ -18,3 +18,9 @@ code {
   --accent: #A4A9B3;
   --letter: #FFF;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
