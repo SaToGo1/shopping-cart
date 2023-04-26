@@ -1,2 +1,2 @@
 # shopping-cart
-Development of a simple shopr with a cart.
+Development of a simple shop with a cart.
