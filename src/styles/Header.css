@@ -1,0 +1,42 @@
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    gap: 5%;
+    margin-right: max(7%, 50px);
+    margin-left: 50px;
+}
+
+.header__MainPageDiv {
+
+}
+    .header__h1 {
+        font-size: 4rem;
+    }
+
+.header__ShopDiv {
+    margin-left: auto;
+}
+
+.header__CartDiv {
+
+}
+    .header__p {
+        font-size: 3rem;
+    }
+
+
+.header__button {
+    color: var(--letter);
+    background-color: var(--main);
+    border: none;
+    padding: 5px 10px;
+}
+
+    .header__button:hover {
+        cursor: pointer;
+
+        outline: 1px solid var(--letter);
+        border-radius: 3px;
+    }

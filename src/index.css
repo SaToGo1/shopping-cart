@@ -16,7 +16,9 @@ code {
   --base: #616773;
   --main: #282C34;
   --accent: #A4A9B3;
+
   --letter: #FFF;
+  --letter2: hsl(0, 0%, 80%);
 }
 
 * {

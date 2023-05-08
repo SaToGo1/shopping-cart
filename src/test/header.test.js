@@ -6,8 +6,19 @@ describe('The Header ', () => {
 
   it('renders header Title', () => {
     render(<Header />);
-    screen.debug();
     const title = screen.getByText(/Main Page/i);
+    expect(title).toBeInTheDocument();
+  });
+
+  it('renders header Shop', () => {
+    render(<Header />);
+    const title = screen.getByText(/Shop/i);
+    expect(title).toBeInTheDocument();
+  });
+
+  it('renders header Cart', () => {
+    render(<Header />);
+    const title = screen.getByText(/Cart/i);
     expect(title).toBeInTheDocument();
   });
 })
