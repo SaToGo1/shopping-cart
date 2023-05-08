@@ -6,6 +6,8 @@ header {
     gap: 5%;
     margin-right: max(7%, 50px);
     margin-left: 50px;
+
+    min-height: 10vh;
 }
 
 .header__MainPageDiv {
