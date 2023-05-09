@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../components/header';
 
-describe('The Header ', () => {
+describe('The Header', () => {
 
   it('renders header Title', () => {
     render(<Header />);

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Header  matches Snapshot 1`] = `
+exports[`The Header matches Snapshot 1`] = `
 <div>
   <header>
     <div

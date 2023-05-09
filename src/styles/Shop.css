@@ -1,0 +1,14 @@
+.shop {
+    min-height: 90vh;
+    padding: 4rem;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.shop__card {
+    border: 1px solid red;
+    min-height: 500px;
+}
