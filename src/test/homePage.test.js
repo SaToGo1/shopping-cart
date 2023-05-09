@@ -9,4 +9,11 @@ describe('The Home Page ', () => {
       const title = screen.getByText(/STORE/i);
       expect(title).toBeInTheDocument();
     });
+
+    it('renders an image', () => {
+      render(<HomePage />);
+
+      const img = screen.getByAltText(/img/i);
+      expect(img).toBeInTheDocument();
+    });
 })
