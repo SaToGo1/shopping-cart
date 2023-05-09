@@ -21,4 +21,9 @@ describe('The Header ', () => {
     const title = screen.getByText(/Cart/i);
     expect(title).toBeInTheDocument();
   });
+
+  it('matches Snapshot', () => {
+    const { container } = render(<Header />);
+    expect(container).toMatchSnapshot();
+  });
 })

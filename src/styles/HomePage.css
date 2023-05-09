@@ -6,6 +6,20 @@
     justify-content: center;
 }
 
-.homePage__title {
-    font-size: 8rem;
+.homePage__content {
+    display: flex;
+    align-items: center;
+    gap: 200px;
 }
+
+    .homePage__title {
+        font-size: 8rem;
+        margin-right: 200px;
+    }
+
+    .homePage__img {
+        width: 400px;
+        height: 800px;
+        border: 1px solid white;
+    }
+
