@@ -1,11 +1,7 @@
 import '../styles/Header.css'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
-
-    const handleClickMainPage = {
-
-    }
+const Header = ({ handleCart }) => {
 
     return (
         <header>
@@ -25,7 +21,7 @@ const Header = () => {
                 </Link>
             </div>
             <div className='header__CartDiv'>
-                <button className='header__button'>
+                <button className='header__button' onClick={handleCart}>
                     <p className='header__p'>Cart</p>
                 </button>
             </div>
