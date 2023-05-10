@@ -42,3 +42,9 @@ header {
         outline: 1px solid var(--letter);
         border-radius: 3px;
     }
+
+    .header__button:active {
+        cursor: pointer;
+        color: var(--letter2);
+        outline: 1px solid var(--letter2);
+    }

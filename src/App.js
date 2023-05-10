@@ -7,24 +7,16 @@ import Shop from './components/shop'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HomePage />
-      <Shop />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/shop' element={<Shop />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
-
-const routes = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/shop' element={<Shop />} />
-      </Routes>
-    </Router>
-  )
-}

@@ -1,19 +1,28 @@
 import '../styles/Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
+
+    const handleClickMainPage = {
+
+    }
 
     return (
         <header>
             <div className='header__MainPageDiv'>
-                <button className='header__button'>
-                    <h1 className='header__h1'>Main Page</h1>
-                </button>
+                <Link to='/'>
+                    <button className='header__button'>
+                        <h1 className='header__h1'>Main Page</h1>
+                    </button>
+                </Link>
             </div>
 
             <div className='header__ShopDiv'>
-                <button className='header__button'>
-                    <p className='header__p'>Shop</p>
-                </button>
+                <Link to='/shop'>
+                    <button className='header__button'>
+                        <p className='header__p'>Shop</p>
+                    </button>
+                </Link>
             </div>
             <div className='header__CartDiv'>
                 <button className='header__button'>
