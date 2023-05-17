@@ -6,5 +6,21 @@
 
     width: 20vw;
     height: 100vh;
-    background-color: red;
+    background-color: var(--base);
 }
+
+    .cart__container {
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+    }
+
+        .cart__title { 
+            font-size: 3rem;
+        }

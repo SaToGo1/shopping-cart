@@ -1,20 +1,21 @@
 import '../styles/Shop.css'
+import ShopCard from './shopCard'
 
 const Shop = () => {
 
     return (
         <main className="shop">
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
+            <ShopCard/>
+            <ShopCard/>
+            <ShopCard/>
 
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
+            <ShopCard/>
+            <ShopCard/>
+            <ShopCard/>
             
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
-            <div className='shop__card'></div>
+            <ShopCard/>
+            <ShopCard/>
+            <ShopCard/>
         </main>
     )
 }

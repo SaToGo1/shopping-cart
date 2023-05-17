@@ -7,8 +7,14 @@ const Cart = ({ cartStatus, handleCart }) => {
         <>
             {cartStatus === true && 
                 <div className="cart">
-                    <p>Hello</p>
-                    <button onClick={handleCart}>Close</button>
+                    <div className='cart__container'>
+                        <div className='cart__title__container'>
+                            <h2 className='cart__title'>Your Shopping Cart</h2>
+                        </div>
+                        <div>
+                            <button onClick={handleCart}>Close</button>
+                        </div>
+                    </div>
                 </div>
             }
         </>
