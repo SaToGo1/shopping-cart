@@ -1,4 +1,4 @@
-import '../styles/Cart.css'
+import './styles/Cart.css'
 
 const Cart = ({ cartStatus, handleCart }) => {
     console.log(cartStatus)

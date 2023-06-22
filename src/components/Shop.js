@@ -1,5 +1,5 @@
-import '../styles/Shop.css'
-import ShopCard from './shopCard'
+import './styles/Shop.css'
+import ShopCard from './ShopCard'
 
 const Shop = () => {
 
