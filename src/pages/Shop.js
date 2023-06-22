@@ -1,21 +1,17 @@
 import './Shop.css'
 import ShopCard from '../components/ShopCard'
 
-const Shop = () => {
+const Shop = ({ products }) => {
 
     return (
         <main className="shop">
-            <ShopCard/>
-            <ShopCard/>
-            <ShopCard/>
-
-            <ShopCard/>
-            <ShopCard/>
-            <ShopCard/>
-            
-            <ShopCard/>
-            <ShopCard/>
-            <ShopCard/>
+            {
+                products.map(product => {
+                    return (
+                        <ShopCard product={product} key={product.id} />
+                    )
+                })
+            }
         </main>
     )
 }

@@ -1,4 +1,79 @@
 .shop__card {
-    border: 1px solid red;
-    min-height: 500px;
+    --shopCard__margin-sides: 20px;
+
+    background-color: var(--base);
+
+    /* border: 1px solid var(--accent); */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px white;
+
+    height: 500px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+.shopCard__title {
+    margin-left: var(--shopCard__margin-sides);
+    margin-right: var(--shopCard__margin-sides);
+}
+.shopCard__buttonDiv {
+    margin-left: var(--shopCard__margin-sides);
+    margin-right: var(--shopCard__margin-sides);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .shopCard__buttonDiv button {
+        padding: 5px 10px;
+
+        background-color: var(--main);
+        color: var(--letter);
+
+        border: 1px solid var(--base);
+        border-radius: 4px;
+
+        cursor: pointer;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .shopCard__buttonDiv button:hover {
+        background-color: var(--letter);
+        color: var(--main);
+    }
+
+    .shopCard__buttonDiv button:active {
+        background-color: var(--accent);
+        color: var(--main);
+    }
+
+.shopCard__image-div {
+    background-color: white;
+
+    width: 100%;
+    height: 350px;
+    
+    /* border-radius: 8px; */
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+    .shopCard__image {
+        width: 250px;
+        height: auto;
+    }
+
+.shopCard__price {
+    margin-left: var(--shopCard__margin-sides);
+    margin-right: var(--shopCard__margin-sides);
+    text-align: center;
+    color: var(--letter2);
+    font-size: 1.5rem;
 }
