@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // COMPONENTS
-import Header from './components/Header'
-import HomePage from './components/HomePage'
-import Shop from './components/Shop'
-import Cart from './components/Cart'
+import Header from './Layout/Header'
+import HomePage from './pages/HomePage'
+import Shop from './pages/Shop'
+import Cart from './Layout/Cart'
 
 // DATA
 import productsData from './mock/data.json'

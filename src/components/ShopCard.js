@@ -1,4 +1,4 @@
-import './styles/Shop.css'
+import './ShopCard.css'
 
 const ShopCard = () => {
 
@@ -6,10 +6,10 @@ const ShopCard = () => {
 
         <div className='shop__card'>
             <div>
-                <img alt='img'></img>
+                <p>Name</p>
             </div>
             <div>
-                <p>Name</p>
+                <img alt='img'></img>
             </div>
             <div>
                 <button>Add to cart</button>

@@ -1,4 +1,4 @@
-import './styles/HomePage.css'
+import './HomePage.css'
 
 const HomePage = () => {
 
@@ -6,6 +6,7 @@ const HomePage = () => {
         <main className='homePage'>
             <div className='homePage__content'>
                 <div>
+                    <p>fake</p>
                     <h2 className='homePage__title'>STORE</h2>
                 </div>
                 <div className='homePage__img'>
