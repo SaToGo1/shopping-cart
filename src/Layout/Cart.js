@@ -1,3 +1,5 @@
+import CartCard from '../components/CartCard';
+import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
 
 const Cart = ({ isCartVisible, handleCart, cart }) => {
@@ -10,24 +12,16 @@ const Cart = ({ isCartVisible, handleCart, cart }) => {
                         <ul>
                             { cart && 
                                 cart.map((product) => (
-                                    <li className='cart__product-li'>
-                                        <div className='cart__image-div'>
-                                            <img 
-                                                className='cart__image'
-                                                alt={`product ${product.title}`}
-                                                src={product.image}
-                                            />
-                                        </div>
-                                        <h3>{product.title}</h3>
-                                        <p>$ {product.price}</p>
-                                        <p>quantity: TODO</p>
-                                    </li>
+                                    <CartCard product={product} key={product.id}/>
                                 ))
                                 
                             }
                         </ul>
                         <div>
-                            <button onClick={handleCart}>Close</button>
+                            <ButtonShop 
+                                click={handleCart}
+                                text="Close" 
+                            />
                         </div>
                     </div>
                 </section>

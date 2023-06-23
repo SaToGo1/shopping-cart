@@ -49,7 +49,7 @@
     font-size: 1.5rem;
 }
 
-.shopCard__buttonDiv {
+.shopCard__button {
     margin-left: var(--shopCard__margin-sides);
     margin-right: var(--shopCard__margin-sides);
 
@@ -57,26 +57,3 @@
     align-items: center;
     justify-content: center;
 }
-
-    .shopCard__buttonDiv button {
-        padding: 10px 20px;
-
-        background-color: var(--main);
-        color: var(--letter);
-
-        border: 1px solid var(--base);
-        border-radius: 4px;
-
-        cursor: pointer;
-        text-shadow: 1px 1px 2px black;
-    }
-
-        .shopCard__buttonDiv button:hover {
-            background-color: var(--letter);
-            color: var(--main);
-        }
-
-        .shopCard__buttonDiv button:active {
-            background-color: var(--accent);
-            color: var(--main);
-        }
