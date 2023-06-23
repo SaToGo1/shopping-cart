@@ -1,0 +1,22 @@
+.ButtonShop__button {
+    padding: 10px 20px;
+
+    background-color: var(--main);
+    color: var(--letter);
+
+    border: 1px solid var(--base);
+    border-radius: 4px;
+
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+}
+
+    .ButtonShop__button:hover {
+        background-color: var(--letter);
+        color: var(--main);
+    }
+
+    .ButtonShop__button:active {
+        background-color: var(--accent);
+        color: var(--main);
+    }
