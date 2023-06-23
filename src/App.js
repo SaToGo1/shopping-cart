@@ -26,12 +26,19 @@ function useProducts () {
 
 function App() {
   // controls if cart is open or closed.
-  const [cartStatus, setCartStatus] = useState(false);
+  const [isCartVisible, setIsCartVisible] = useState(false);
   const handleCart = () => {
-    setCartStatus(!cartStatus);
+    setIsCartVisible(!isCartVisible);
   }
 
-  const { products } = useProducts() 
+  const [cart, setCart] = useState([])
+
+  const { products } = useProducts()
+
+  const addToCart = (product) => {
+    const newCart = [...cart, product]
+    setCart(newCart);
+  }
 
   return (
     <Router>
@@ -39,9 +46,9 @@ function App() {
         <Header handleCart={handleCart} />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/shop' element={<Shop products = {products} />} />
+          <Route path='/shop' element={<Shop products={products} addToCart={addToCart} />} />
         </Routes>
-        <Cart cartStatus={cartStatus} handleCart={handleCart} />
+        <Cart isCartVisible={isCartVisible} handleCart={handleCart} cart={cart} />
       </div>
     </Router>
   );

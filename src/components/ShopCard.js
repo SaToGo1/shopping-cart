@@ -1,6 +1,6 @@
 import './ShopCard.css'
 
-const ShopCard = ({ product }) => {
+const ShopCard = ({ product, addToCart }) => {
     const transformTitle = (title) => {
         if (title.length < 60) return title;
         return `${title.slice(0, 60)} ...`;
@@ -19,7 +19,7 @@ const ShopCard = ({ product }) => {
             <h2 className='shopCard__title'>{transformTitle(product.title)}</h2>
             <p className='shopCard__price'>${product.price}</p>
             <div className='shopCard__buttonDiv'>
-                <button>Add to cart</button>
+                <button onClick={() => addToCart(product)}>Add to cart</button>
             </div>
         </div>
     )
