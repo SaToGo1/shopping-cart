@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 30px;
+    gap: 10px;
 }
 
 .cart__sectionTitle { 
@@ -37,7 +37,9 @@
 
 }
 
-/* .cart__closeButton {
-    background-color: var(--main);
-    color: var(--letter)
-} */
+.cart__hr {
+    width: 80%;
+}
+.cart__totalPrice {
+    display: flex;
+}
