@@ -4,15 +4,24 @@ const Cart = ({ isCartVisible, handleCart, cart }) => {
     return (
         <>
             {isCartVisible === true && 
-                <main className="cart">
+                <section className="cart">
                     <div className='cart__container'>
-                        <div className='cart__title-div'>
-                            <h2 className='cart__title'>Your Shopping Cart</h2>
-                        </div>
+                        <h2 className='cart__sectionTitle'>Your Cart</h2>
                         <ul>
                             { cart && 
                                 cart.map((product) => (
-                                    <li>{product.title}</li>
+                                    <li className='cart__product-li'>
+                                        <div className='cart__image-div'>
+                                            <img 
+                                                className='cart__image'
+                                                alt={`product ${product.title}`}
+                                                src={product.image}
+                                            />
+                                        </div>
+                                        <h3>{product.title}</h3>
+                                        <p>$ {product.price}</p>
+                                        <p>quantity: TODO</p>
+                                    </li>
                                 ))
                                 
                             }
@@ -21,7 +30,7 @@ const Cart = ({ isCartVisible, handleCart, cart }) => {
                             <button onClick={handleCart}>Close</button>
                         </div>
                     </div>
-                </main>
+                </section>
             }
         </>
     )
