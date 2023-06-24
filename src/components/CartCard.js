@@ -1,3 +1,8 @@
+// NOTES:
+// Maybe need to change the expand click to the image, so if you click the
+// text it does not expand or shrink
+// specifically when we add buttons to quantity or delete product from cart.
+
 import { useState } from 'react'
 import './CartCard.css'
 
@@ -7,7 +12,7 @@ export default function CartCard ({ product }) {
     return (
         <>
             {active && (
-                <li className='cart__product-li' onClick={() => {setActive(false)}}>
+                <li className='cartCard__li' onClick={() => {setActive(false)}}>
                     <div className='cart__imageDiv-active'>
                         <img 
                             className='cart__image'
@@ -24,7 +29,7 @@ export default function CartCard ({ product }) {
             }
 
             {!active && (
-                <li className='cart__product-li' onClick={() => {setActive(true)}}>
+                <li className='cartCard__li cartCard__li-notActive' onClick={() => {setActive(true)}}>
                     <div className='cart__imageDiv'>
                         <img 
                             className='cart__image'

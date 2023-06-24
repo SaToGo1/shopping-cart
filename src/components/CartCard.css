@@ -1,11 +1,16 @@
-.cart__product-li {
+.cartCard__li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
+
+    .cartCard__li-notActive:hover {
+        background:rgba(0,0,0,0.6);
+        border-radius: 10px;
+    }
 
 .cart__imageDiv{
     height: 100px;
@@ -18,10 +23,6 @@
     border-radius: 10px;
 }
 
-    .cart__imageDiv:hover{
-        background-color: var(--accent);
-    }
-
     .cart__imageDiv-active{
         overflow:visible;
         height: auto;
@@ -31,6 +32,7 @@
     background-color: white;
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .cartCard__price {
