@@ -23,7 +23,7 @@ export default function CartCard ({ product }) {
                     </div>
                     <h3>{product.title}</h3>
                     <p className='cartCard__price'>$ {product.price}</p>
-                    <p>quantity: TODO</p> <p>quantity buttons TODO</p>
+                    <p>quantity: {product.quantity}</p> <p>quantity buttons TODO</p>
                     <p>TODO QUIT BUTTON</p>
                 </li>
             </>
@@ -43,7 +43,7 @@ export default function CartCard ({ product }) {
                     </div>
                     <h3>{product.title}</h3>
                     <p>$ {product.price}</p>
-                    <p>quantity: TODO</p>
+                    <p>quantity: {product.quantity}</p>
                 </li>
             </>
         )
