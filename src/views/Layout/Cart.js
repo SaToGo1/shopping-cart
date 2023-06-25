@@ -15,7 +15,6 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart }) => {
                                 cart.map((product) => (
                                     <CartCard product={product} key={product.id}/>
                                 ))
-                                
                             }
                         </ul>
                         <hr className='cart__hr' />

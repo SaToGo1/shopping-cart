@@ -12,7 +12,7 @@ const ShopCard = ({ product, addToCart }) => {
             <div className='shopCard__image-div '>
                 <img 
                     className='shopCard__image'
-                    alt={`product ${product.title}`}
+                    alt={`${product.description}`}
                     src={product.image}
                 />
             </div>

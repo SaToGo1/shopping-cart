@@ -7,16 +7,17 @@ import { useState } from 'react'
 import './CartCard.css'
 
 export default function CartCard ({ product }) {
-    const [active, setActive] = useState(false)
+    const [isExpanded, setIsExpanded] = useState(false)
 
-    return (
-        <>
-            {active && (
-                <li className='cartCard__li' onClick={() => {setActive(false)}}>
+    // EXPANDED
+    if (isExpanded == true){
+        return (
+            <>
+                <li className='cartCard__li' onClick={() => {setIsExpanded(false)}}>
                     <div className='cart__imageDiv-active'>
                         <img 
                             className='cart__image'
-                            alt={`product ${product.title}`}
+                            alt={`${product.description}`}
                             src={product.image}
                         />
                     </div>
@@ -25,15 +26,18 @@ export default function CartCard ({ product }) {
                     <p>quantity: TODO</p> <p>quantity buttons TODO</p>
                     <p>TODO QUIT BUTTON</p>
                 </li>
-                )
-            }
-
-            {!active && (
-                <li className='cartCard__li cartCard__li-notActive' onClick={() => {setActive(true)}}>
+            </>
+        )
+    }
+    // NOT EXPANDED
+    else {
+        return (
+            <>
+                <li className='cartCard__li cartCard__li-notActive' onClick={() => {setIsExpanded(true)}}>
                     <div className='cart__imageDiv'>
                         <img 
                             className='cart__image'
-                            alt={`product ${product.title}`}
+                            alt={`${product.description}`}
                             src={product.image}
                         />
                     </div>
@@ -41,7 +45,7 @@ export default function CartCard ({ product }) {
                     <p>$ {product.price}</p>
                     <p>quantity: TODO</p>
                 </li>
-            )}
-        </>
-    )
+            </>
+        )
+    }
 }
