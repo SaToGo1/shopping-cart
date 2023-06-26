@@ -7,7 +7,7 @@
     margin-bottom: 20px;
 }
 
-    .cartCard__li-notActive:hover {
+    .cartCard__li:hover {
         background:rgba(0,0,0,0.6);
         border-radius: 10px;
     }
@@ -36,5 +36,35 @@
 }
 
 .cartCard__price {
-    font: 1rem;
+    font-size: 2rem;
+    color: var(--letter)
 }
+
+.cartCard__quantityDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.cartCard__quantityButton {
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--main);
+    color: var(--letter);
+
+    border: 1px solid var(--base);
+    border-radius: 20%;
+
+    cursor: pointer;
+
+}
+
+    .cartCard__quantityButton:hover {
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .cartCard__quantityButton:active {
+        background-color: rgba(0,0,0,1);
+    }

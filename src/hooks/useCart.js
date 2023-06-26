@@ -30,6 +30,41 @@ export default function useCart () {
         newCart = [...cart, newCartProduct]
         setCart(newCart);
     }
+
+    const augmentQuantity = (product) => {
+        let newCart = [...cart]
+        let isContained = cart.some((el, index) => {
+            if(product.id === el.id) {
+                newCart[index].quantity = newCart[index].quantity + 1;
+                return true
+            }
+            return false
+        })
+        if (isContained) {
+            setCart(newCart)
+            return ;
+        }
+        else {
+            throw new Error('Augmented a product that is not in the cart')
+        }
+    }
+
+    const decreaseQuantity = (product) => {
+        let newCart = [...cart]
+        let isContained = cart.some((el, index) => {
+            if(product.id === el.id) {
+                if( el.quantity === 1) return false;
+
+                newCart[index].quantity = newCart[index].quantity - 1;
+                return true
+            }
+            return false
+        })
+        if (isContained) {
+            setCart(newCart)
+            return ;
+        }
+    }
     
-    return { cart, isCartVisible, handleCartDisplay, addToCart}
+    return { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity }
   }

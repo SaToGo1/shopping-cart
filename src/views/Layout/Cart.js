@@ -2,7 +2,7 @@ import CartCard from '../components/CartCard';
 import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
 
-const Cart = ({ isCartVisible, handleCartDisplay, cart }) => {
+const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity }) => {
     
     return (
         <>
@@ -13,7 +13,12 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart }) => {
                         <ul>
                             { cart && 
                                 cart.map((product) => (
-                                    <CartCard product={product} key={product.id}/>
+                                    <CartCard 
+                                        product={product} 
+                                        key={product.id} 
+                                        augmentQuantity={augmentQuantity} 
+                                        decreaseQuantity={decreaseQuantity} 
+                                    />
                                 ))
                             }
                         </ul>

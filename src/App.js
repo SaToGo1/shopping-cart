@@ -12,7 +12,7 @@ import useCart from './hooks/useCart';
 import useProducts from './hooks/useProducts';
 
 function App() {
-  const { cart, isCartVisible, handleCartDisplay, addToCart } = useCart()
+  const { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity } = useCart()
   const { products } = useProducts()
 
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/shop' element={<Shop products={products} addToCart={addToCart} />} />
         </Routes>
-        <Cart isCartVisible={isCartVisible} handleCartDisplay={handleCartDisplay} cart={cart} />
+        <Cart isCartVisible={isCartVisible} handleCartDisplay={handleCartDisplay} cart={cart} augmentQuantity={augmentQuantity} decreaseQuantity={decreaseQuantity} />
       </div>
     </Router>
   );

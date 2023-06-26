@@ -6,46 +6,29 @@
 import { useState } from 'react'
 import './CartCard.css'
 
-export default function CartCard ({ product }) {
+export default function CartCard ({ product, augmentQuantity, decreaseQuantity }) {
     const [isExpanded, setIsExpanded] = useState(false)
 
-    // EXPANDED
-    if (isExpanded == true){
-        return (
-            <>
-                <li className='cartCard__li' onClick={() => {setIsExpanded(false)}}>
-                    <div className='cart__imageDiv-active'>
-                        <img 
-                            className='cart__image'
-                            alt={`${product.description}`}
-                            src={product.image}
-                        />
-                    </div>
-                    <h3>{product.title}</h3>
-                    <p className='cartCard__price'>$ {product.price}</p>
-                    <p>quantity: {product.quantity}</p> <p>quantity buttons TODO</p>
-                    <p>TODO QUIT BUTTON</p>
-                </li>
-            </>
-        )
-    }
-    // NOT EXPANDED
-    else {
-        return (
-            <>
-                <li className='cartCard__li cartCard__li-notActive' onClick={() => {setIsExpanded(true)}}>
-                    <div className='cart__imageDiv'>
-                        <img 
-                            className='cart__image'
-                            alt={`${product.description}`}
-                            src={product.image}
-                        />
-                    </div>
-                    <h3>{product.title}</h3>
-                    <p>$ {product.price}</p>
-                    <p>quantity: {product.quantity}</p>
-                </li>
-            </>
-        )
-    }
+    return (
+        <>
+            <li className='cartCard__li'>
+                <div className={isExpanded? 'cart__imageDiv-active' : 'cart__imageDiv'}>
+                    <img 
+                        className='cart__image'
+                        alt={`${product.description}`}
+                        src={product.image}
+                        onClick={() => {setIsExpanded(!isExpanded)}}
+                    />
+                </div>
+                <h3>{product.title}</h3>
+                <p className='cartCard__price'>$ {product.price}</p>
+                <div className='cartCard__quantityDiv'>
+                    <button className='cartCard__quantityButton' onClick={() => {decreaseQuantity(product)}}>-</button> 
+                    <p>quantity: {product.quantity}</p> 
+                    <button className='cartCard__quantityButton' onClick={() => {augmentQuantity(product)}}>+</button>
+                </div>
+                <p>TODO QUIT BUTTON</p>
+            </li>
+        </>
+    )
 }
