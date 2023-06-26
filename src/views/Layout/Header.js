@@ -1,10 +1,10 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-const Header = ({ handleCartDisplay }) => {
+const Header = ({ handleCartDisplay, isCartVisible }) => {
 
     return (
-        <header>
+        <header className={(isCartVisible? 'header__cart-open' : '')}>
             <section>
                 <Link to='/'>
                     <button className='header__button'>

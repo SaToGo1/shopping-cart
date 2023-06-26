@@ -10,6 +10,10 @@ header {
     min-height: 10vh;
 }
 
+.header__cart-open {
+    width: calc(97% - var(--cart-width));
+}
+
 .header__h1 {
     font-size: 4rem;
 }

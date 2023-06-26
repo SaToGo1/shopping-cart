@@ -18,10 +18,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header handleCartDisplay={handleCartDisplay} />
+        <Header handleCartDisplay={handleCartDisplay} isCartVisible={isCartVisible} />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/shop' element={<Shop products={products} addToCart={addToCart} />} />
+          <Route path='/shop' element={<Shop products={products} addToCart={addToCart} isCartVisible={isCartVisible} />} />
         </Routes>
         <Cart isCartVisible={isCartVisible} handleCartDisplay={handleCartDisplay} cart={cart} augmentQuantity={augmentQuantity} decreaseQuantity={decreaseQuantity} />
       </div>

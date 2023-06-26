@@ -1,10 +1,10 @@
 import './Shop.css'
 import ShopCard from '../components/ShopCard'
 
-const Shop = ({ products, addToCart }) => {
+const Shop = ({ products, addToCart, isCartVisible }) => {
 
     return (
-        <main className="shop">
+        <main className={'shop ' + (isCartVisible ? 'shop-cartOpen' : ' ')}>
             {
                 products.map(product => {
                     return (
