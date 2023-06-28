@@ -65,6 +65,23 @@ export default function useCart () {
             return ;
         }
     }
+
+    const deleteProduct = (product) => {
+        const cartCopy = [...cart]
+        let isContained = false;
+        
+        const newCart = cartCopy.filter((el) => {
+            if (el.id === product.id) {
+                isContained = true;
+                return false;
+            }
+            return true;
+        })
+
+        if (isContained) {
+            setCart(newCart)
+        }
+    }
     
-    return { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity }
+    return { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity, deleteProduct }
   }

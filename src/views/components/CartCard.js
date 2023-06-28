@@ -5,8 +5,9 @@
 
 import { useState } from 'react'
 import './CartCard.css'
+import ButtonShop from './ButtonShop'
 
-export default function CartCard ({ product, augmentQuantity, decreaseQuantity }) {
+export default function CartCard ({ product, augmentQuantity, decreaseQuantity, deleteProduct }) {
     const [isExpanded, setIsExpanded] = useState(false)
 
     return (
@@ -20,15 +21,21 @@ export default function CartCard ({ product, augmentQuantity, decreaseQuantity }
                         onClick={() => {setIsExpanded(!isExpanded)}}
                     />
                 </div>
-                <h3>{product.title}</h3>
+                <h3 className='cartCard__title'>{product.title}</h3>
                 <p className='cartCard__price'>$ {product.price}</p>
                 <div className='cartCard__quantityDiv'>
-                    <button className='cartCard__quantityButton' onClick={() => {decreaseQuantity(product)}}>-</button> 
+                    <ButtonShop text={'-'} click={() => {decreaseQuantity(product)}} theme='small' ></ButtonShop>
                     <p>quantity: {product.quantity}</p> 
-                    <button className='cartCard__quantityButton' onClick={() => {augmentQuantity(product)}}>+</button>
+                    <ButtonShop text={'+'} click={() => {decreaseQuantity(product)}} theme='small' ></ButtonShop>
                 </div>
-                <p>TODO QUIT BUTTON</p>
+                <ButtonShop text={'Quit'} click={() => {deleteProduct(product)}} theme='dark' ></ButtonShop>
             </li>
         </>
     )
 }
+
+/*
+                    <button className='cartCard__quantityButton' onClick={() => {decreaseQuantity(product)}}>-</button> 
+                    <p>quantity: {product.quantity}</p> 
+                    <button className='cartCard__quantityButton' onClick={() => {augmentQuantity(product)}}>+</button>
+*/

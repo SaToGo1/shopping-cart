@@ -20,3 +20,50 @@
         background-color: var(--accent);
         color: var(--main);
     }
+
+
+
+.ButtonShop__button-dark {
+    padding: 10px 20px;
+
+    background-color: var(--main);
+    color: var(--letter);
+
+    border: 1px solid var(--base);
+    border-radius: 4px;
+
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+    
+}
+    
+    .ButtonShop__button-dark:hover {
+        background-color: rgba(0,0,0,0.6);
+    }
+    
+    .ButtonShop__button-dark:active {
+        background-color: rgba(0,0,0,1);
+    }
+
+
+.ButtonShop__button-small {
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--main);
+    color: var(--letter);
+
+    border: 1px solid var(--base);
+    border-radius: 20%;
+
+    cursor: pointer;
+
+}
+    
+    .ButtonShop__button-small:hover {
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .ButtonShop__button-small:active {
+        background-color: rgba(0,0,0,1);
+    }

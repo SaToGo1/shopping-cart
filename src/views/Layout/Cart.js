@@ -2,7 +2,7 @@ import CartCard from '../components/CartCard';
 import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
 
-const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity }) => {
+const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity, deleteProduct }) => {
     
     return (
         <>
@@ -18,6 +18,7 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreas
                                         key={product.id} 
                                         augmentQuantity={augmentQuantity} 
                                         decreaseQuantity={decreaseQuantity} 
+                                        deleteProduct={deleteProduct}
                                     />
                                 ))
                             }
