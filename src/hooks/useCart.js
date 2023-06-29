@@ -14,10 +14,11 @@ export default function useCart () {
         let isDuplicated = cart.some((el, index) => {
             if(product.id === el.id) {
                 newCart[index].quantity = newCart[index].quantity + 1;
-                return true
+                return true;
             }
-            return false
+            return false;
         })
+
         if (isDuplicated) {
             setCart(newCart)
             return ;

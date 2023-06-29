@@ -1,9 +1,25 @@
 import CartCard from '../components/CartCard';
 import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
+import { useState } from 'react';
 
 const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity, deleteProduct }) => {
+    const [totalPrice, setTotalPrice] = useState(0)
     
+    const calculatePrice = () => {
+        let price = cart.reduce((sum, el) => sum + (el.price * el.quantity), 0)
+        price = price.toFixed(2)
+        setTotalPrice(price)
+    }
+
+    const deletePriceProduct = (product) => {
+        let newPrice = totalPrice;
+        newPrice = newPrice - (product.price * product.quantity)
+        newPrice = newPrice.toFixed(2)
+        setTotalPrice(newPrice)
+    }
+    
+
     return (
         <>
             { isCartVisible === true && 
@@ -19,6 +35,8 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreas
                                         augmentQuantity={augmentQuantity} 
                                         decreaseQuantity={decreaseQuantity} 
                                         deleteProduct={deleteProduct}
+                                        calculatePrice={calculatePrice}
+                                        deletePriceProduct={deletePriceProduct}
                                     />
                                 ))
                             }
@@ -27,7 +45,7 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreas
                         <div className='cart__totalPrice'>
                             <p>TODO</p>
                             <h3>Total Price:</h3>
-                            <p>$200</p>
+                            <p>${totalPrice}</p>
                         </div>
                         <div>
                             <ButtonShop 
