@@ -2,6 +2,7 @@ import CartCard from '../components/CartCard';
 import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
 import { useState } from 'react';
+import confetti from 'canvas-confetti';
 
 const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity, deleteProduct }) => {
     const [totalPrice, setTotalPrice] = useState(0)
@@ -43,13 +44,12 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreas
                         </ul>
                         <hr className='cart__hr' />
                         <div className='cart__totalPrice'>
-                            <p>TODO</p>
                             <h3>Total Price:</h3>
                             <p>${totalPrice}</p>
                         </div>
                         <div>
                             <ButtonShop 
-                                click={() => alert('fake store you can\'t buy')}
+                                click={() => confetti()}
                                 text='Buy' 
                             />
                         </div>
