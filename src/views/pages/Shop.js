@@ -1,7 +1,9 @@
 import './Shop.css'
 import ShopCard from '../components/ShopCard'
+import useProducts from '../../hooks/useProducts'
 
-const Shop = ({ products, addToCart, isCartVisible }) => {
+const Shop = ({ addToCart, isCartVisible }) => {
+    const { products } = useProducts()
 
     return (
         <main className={'shop ' + (isCartVisible ? 'shop-cartOpen' : ' ')}>

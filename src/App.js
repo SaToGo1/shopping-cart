@@ -9,11 +9,9 @@ import Cart from './views/Layout/Cart'
 
 // Custom Hooks
 import useCart from './hooks/useCart';
-import useProducts from './hooks/useProducts';
 
 function App() {
   const { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity, deleteProduct } = useCart()
-  const { products } = useProducts()
 
   return (
     <Router>
@@ -21,7 +19,7 @@ function App() {
         <Header handleCartDisplay={handleCartDisplay} isCartVisible={isCartVisible} />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/shop' element={<Shop products={products} addToCart={addToCart} isCartVisible={isCartVisible} />} />
+          <Route path='/shop' element={<Shop addToCart={addToCart} isCartVisible={isCartVisible} />} />
         </Routes>
         <Cart 
           isCartVisible={isCartVisible} 
