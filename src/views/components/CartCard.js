@@ -6,9 +6,11 @@
 import { useEffect, useState } from 'react'
 import './CartCard.css'
 import ButtonShop from './ButtonShop'
+import useCart from '../../hooks/useCart'
 
-export default function CartCard ({ product, augmentQuantity, decreaseQuantity, deleteProduct, calculatePrice, deletePriceProduct }) {
+export default function CartCard ({ product, calculatePrice, deletePriceProduct }) {
     const [isExpanded, setIsExpanded] = useState(false)
+    const { augmentQuantity, decreaseQuantity, deleteProduct} = useCart()
 
     const handleQuitClick = () => {
         deletePriceProduct(product)

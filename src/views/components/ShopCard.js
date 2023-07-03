@@ -1,7 +1,10 @@
+import useCart from '../../hooks/useCart';
 import ButtonShop from './ButtonShop';
 import './ShopCard.css'
 
-const ShopCard = ({ product, addToCart }) => {
+const ShopCard = ({ product }) => {
+    const { addToCart } = useCart()
+
     const transformTitle = (title) => {
         if (title.length < 60) return title;
         return `${title.slice(0, 60)} ...`;

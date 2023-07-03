@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/cartContext";
 
 export default function useCart () {
-    const [cart, setCart] = useState([])
-    const [isCartVisible, setIsCartVisible] = useState(false); 
+    const { 
+        cart, setCart,
+        isCartVisible, setIsCartVisible 
+    } = useContext(CartContext)
   
     const handleCartDisplay = () => {
         setIsCartVisible(!isCartVisible);

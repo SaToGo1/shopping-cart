@@ -1,7 +1,9 @@
+import useCart from '../../hooks/useCart'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-const Header = ({ handleCartDisplay, isCartVisible }) => {
+const Header = () => {
+    const {isCartVisible, handleCartDisplay} = useCart()
 
     return (
         <header className={(isCartVisible? 'header__cart-open' : '')}>

@@ -3,10 +3,12 @@ import ButtonShop from '../components/ButtonShop';
 import './Cart.css'
 import { useState } from 'react';
 import confetti from 'canvas-confetti';
+import useCart from '../../hooks/useCart';
 
-const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreaseQuantity, deleteProduct }) => {
+const Cart = () => {
     const [totalPrice, setTotalPrice] = useState(0)
-    
+    const { cart, isCartVisible, handleCartDisplay } = useCart()
+
     const calculatePrice = () => {
         let price = cart.reduce((sum, el) => sum + (el.price * el.quantity), 0)
         price = price.toFixed(2)
@@ -33,9 +35,6 @@ const Cart = ({ isCartVisible, handleCartDisplay, cart, augmentQuantity, decreas
                                     <CartCard 
                                         product={product} 
                                         key={product.id} 
-                                        augmentQuantity={augmentQuantity} 
-                                        decreaseQuantity={decreaseQuantity} 
-                                        deleteProduct={deleteProduct}
                                         calculatePrice={calculatePrice}
                                         deletePriceProduct={deletePriceProduct}
                                     />
