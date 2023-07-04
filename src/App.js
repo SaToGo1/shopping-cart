@@ -9,7 +9,6 @@ import Cart from './views/Layout/Cart'
 import { CartProvider } from './context/cartContext';
 
 function App() {
-
   return (
     <Router>
       <CartProvider>

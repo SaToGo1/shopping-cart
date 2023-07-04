@@ -8,18 +8,32 @@
 
 .homePage__content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 200px;
+    gap: 40px;
 }
 
     .homePage__title {
         font-size: 8rem;
-        margin-right: 200px;
+        text-shadow: 4px 4px 2px hsl(220, 13%, 10%), 0px 0px 0.1em var(--letter2);
+
+    }
+
+    .homePage__imgDiv {
+        /* width: 400px;
+        height: 800px;
+        border: 1px solid white; */
+        
+        width: 700px;
+        height: 350px;
+        box-shadow: 0px 0px 4px 4px hsl(220, 13%, 10%);
+
+        border-radius: 20px;
     }
 
     .homePage__img {
-        width: 400px;
-        height: 800px;
-        border: 1px solid white;
+        width: 700px;
+        height: 350px;
+        border-radius: 20px;
     }
 
