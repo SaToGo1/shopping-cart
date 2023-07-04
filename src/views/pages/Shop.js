@@ -3,8 +3,7 @@ import ShopCard from '../components/ShopCard'
 import useProducts from '../../hooks/useProducts'
 import useCart from '../../hooks/useCart'
 
-const Shop = () => {
-    const { products } = useProducts()
+const Shop = ({ products }) => {
     const {isCartVisible } = useCart()
 
     return (
