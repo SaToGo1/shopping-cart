@@ -1,0 +1,26 @@
+footer {
+    position: Fixed;
+    left: 0px;
+    bottom: 0px;
+
+    margin: 10px;
+    background-color: #00000080;
+    height: 40px;
+    width: 200px;
+
+    border: 1px solid #00000090;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--letter);
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

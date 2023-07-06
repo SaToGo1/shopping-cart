@@ -6,6 +6,7 @@ import Header from './views/Layout/Header'
 import HomePage from './views/pages/HomePage'
 import Shop from './views/pages/Shop'
 import Cart from './views/Layout/Cart'
+import Footer from './views/Layout/Footer';
 
 // CONTEXT
 import { CartProvider } from './context/cartContext';
@@ -26,6 +27,7 @@ function App() {
             <Route path='/shop' element={<Shop products={products} />} />
           </Routes>
           <Cart />
+          <Footer />
         </div>
       </CartProvider>
     </Router>

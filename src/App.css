@@ -1,6 +1,6 @@
 .App {
     background-color: var(--main);
-    min-height: 100vh;
+    min-height: 20vh;
     align-items: center;
     color: var(--letter);
 }
