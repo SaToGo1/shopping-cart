@@ -1,6 +1,3 @@
-
-// !!!!!!!!!!!!!! Test do not work because of the router.
-
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../views/Layout/Header';
