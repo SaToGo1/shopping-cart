@@ -35,7 +35,7 @@
 .cart__container ul {
     width: 100%;
     height: 73vh;
-    overflow: scroll;
+    overflow: auto;
 
     list-style: none;
 
