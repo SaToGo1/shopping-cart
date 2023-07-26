@@ -14,6 +14,10 @@ import { CartProvider } from './context/cartContext';
 // HOOKS
 import useProducts from './hooks/useProducts';
 
+// this is only to make gh pages work with 
+// the router 
+import PATH from './views/constants';
+
 function App() {
   const { products } = useProducts()
 
@@ -23,8 +27,8 @@ function App() {
         <div className="App">
           <Header />
           <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/shop' element={<Shop products={products} />} />
+            <Route path={PATH} element={<HomePage />} />
+            <Route path={PATH + 'shop'} element={<Shop products={products} />} />
           </Routes>
           <Cart />
           <Footer />
