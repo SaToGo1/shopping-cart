@@ -17,9 +17,10 @@ import useProducts from './hooks/useProducts';
 // this is only to make gh pages work with 
 // the router 
 import PATH from './views/constants';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const { products } = useProducts()
+  const { products } = useProducts();
 
   return (
     <Router>

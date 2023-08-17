@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react'
 // MOCK DATA
 // import productsData from '../mock/data.json'
 
+/**
+ * Saves all the products in the database
+ * @returns {Array Obj} products
+ */
 export default function useProducts () {
     const [products, setProducts] = useState([])
   
@@ -12,7 +16,8 @@ export default function useProducts () {
             title: product.title,
             price: product.price,
             image: product.image,
-            description: product.description
+            description: product.description,
+            category: product.category
         }))
         return productDataMapped
     }

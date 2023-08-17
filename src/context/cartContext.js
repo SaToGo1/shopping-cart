@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+// make the cart data global, so we can see 
+// the cart in any point of the page
 export const CartContext = createContext();
 
 export function CartProvider ({ children }) {

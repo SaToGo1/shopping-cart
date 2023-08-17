@@ -1,6 +1,11 @@
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 
+/**
+ * Saves the items of the cart, and the functionalities of the cart,
+ * also saves the visibility status.
+ * @returns {Obj} Object with the cart and the different functionalities of the cart.
+ */
 export default function useCart () {
     const { 
         cart, setCart,
@@ -88,4 +93,4 @@ export default function useCart () {
     }
     
     return { cart, isCartVisible, handleCartDisplay, addToCart, augmentQuantity, decreaseQuantity, deleteProduct }
-  }
+}
