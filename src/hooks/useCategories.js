@@ -8,13 +8,23 @@ import { useState, useEffect } from "react"
  */
 export default function useCategories(products) {
   // ALL CATEGORIES
-  const [categories, setCategories] = useState(0);
+  const [categories, setCategories] = useState(() => {
+    let initializeCategories = new Set();
+
+    initializeCategories.add('all');
+    products.map(product => initializeCategories.add(product.category));
+    
+    return Array.from(initializeCategories);
+  });
 
   useEffect(() => {
-    let categories = new Set();
-    products.map(product => categories.add(product.category));
-    setCategories(categories);
-  },[products]);
+    let initializeCategories = new Set();
+
+    initializeCategories.add('all');
+    products.map(product => initializeCategories.add(product.category));
+
+    setCategories(Array.from(initializeCategories));
+  }, [products]);
 
   return { categories };
 }

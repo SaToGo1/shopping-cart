@@ -4,12 +4,23 @@
     
     padding: 4rem;
 
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.shop-cartOpen {
+    width: calc(100% - var(--cart-width));
+}
+
+.shop-content {
     display: grid;
 
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 4rem;
 }
 
-.shop-cartOpen {
-    width: calc(100% - var(--cart-width));
+.shop-filters {
+    display: flex;
 }

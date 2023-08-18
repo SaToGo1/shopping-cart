@@ -7,20 +7,29 @@ import { useState, useEffect } from "react"
  */
 export default function useFilters(products) {
   // FILTERS
-  const [filter, setFilter] = useState("men's clothing");
-  const [filteredProducts, setFilteredProducts] = useState(0);
+  const [filter, setFilter] = useState({
+    category: "all",
+  });
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   // when filter changes, so we actualize filtered products,
   // when products change so if we add products of a specific category
   // we include them.
   useEffect(()=>{
-    if(filter === 0 || filter === "all") {
+    if(filter.category === 0 || filter.category === "all") {
       setFilteredProducts(products);
     } else{
-      let newProducts = products.filter(product => filter.includes(product.category));
+      let newProducts = products.filter(product => filter.category === product.category);
       setFilteredProducts(newProducts);
     } 
   }, [filter, products]);
 
-  return { filteredProducts, setFilter };
+  const setCategory = (category) => {
+    setFilter({
+      ...filter,
+      category: category,
+    })
+  }
+
+  return { filteredProducts, setCategory };
 }
