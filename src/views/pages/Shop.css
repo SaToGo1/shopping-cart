@@ -7,20 +7,59 @@
     display: flex;
     flex-direction: column;
 
-    gap: 50px;
+    gap: 0px;
 }
 
-.shop-cartOpen {
-    width: calc(100% - var(--cart-width));
+.shop-filters {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid rgba(56,56,56,.603);
 }
+
+    .shop-filters select {
+        color: var(--letter);
+        background-color: transparent;
+        border: none;
+        padding: 10px 20px;
+
+        cursor: pointer;
+        border-bottom: 1px solid var(--accent);
+    }
+
+    .shop-filters select option {
+        color: var(--letter);
+        background-color: var(--main);
+    }
+
+    .filter-min-max-price-div {
+        display: flex;
+        gap: 10px;
+    }
+
+    .filter-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+
+        cursor: pointer;
+        border-bottom: 1px solid var(--accent);
+    }
 
 .shop-content {
+    margin-top: 50px;
     display: grid;
 
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 4rem;
 }
 
-.shop-filters {
-    display: flex;
+/* SHOPPING CART CART*/
+.shop-cartOpen {
+    width: calc(100% - var(--cart-width));
 }

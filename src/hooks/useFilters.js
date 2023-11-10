@@ -7,29 +7,56 @@ import { useState, useEffect } from "react"
  */
 export default function useFilters(products) {
   // FILTERS
-  const [filter, setFilter] = useState({
+  const [filters, setFilter] = useState({
     category: "all",
+    minPrice: 0,
+    maxPrice: 0,
+    order: 'normal' // normal ASC, DESC
   });
   const [filteredProducts, setFilteredProducts] = useState(products);
 
-  // when filter changes, so we actualize filtered products,
-  // when products change so if we add products of a specific category
-  // we include them.
   useEffect(()=>{
-    if(filter.category === 0 || filter.category === "all") {
-      setFilteredProducts(products);
-    } else{
-      let newProducts = products.filter(product => filter.category === product.category);
-      setFilteredProducts(newProducts);
-    } 
-  }, [filter, products]);
+    const filterProducts = products => {
+      return products.filter(product => {
+        const minPrice = parseFloat(filters.minPrice);
+        const maxPrice = parseFloat(filters.maxPrice);
+
+        return(
+          (minPrice <= product.price || isNaN(minPrice)) &&
+          (maxPrice === 0 || maxPrice >= product.price || isNaN(maxPrice)) &&
+          (
+            filters.category === 'all' ||
+            product.category === filters.category
+          )
+        )
+      })
+    }
+    
+    let newProducts
+    newProducts = filterProducts(products)
+    setFilteredProducts(newProducts)
+  }, [filters, products]);
 
   const setCategory = (category) => {
     setFilter({
-      ...filter,
+      ...filters,
       category: category,
     })
   }
 
-  return { filteredProducts, setCategory };
+  const setMinPrice = (minPrice) => {
+    setFilter({
+      ...filters,
+      minPrice: minPrice,
+    })
+  }
+
+  const setMaxPrice = (minPrice) => {
+    setFilter({
+      ...filters,
+      maxPrice: minPrice,
+    })
+  }
+
+  return { filters, filteredProducts, setCategory, setMinPrice, setMaxPrice };
 }

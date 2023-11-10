@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 // MOCK DATA
-// import productsData from '../mock/data.json'
+import productsData from '../mock/data.json'
 
 /**
  * Saves all the products in the database
@@ -23,16 +23,16 @@ export default function useProducts () {
     }
 
     useEffect(()=>{
-      fetch('https://fakestoreapi.com/products/')
-        .then(data => data.json())
-        .then(productsData => {
-            let productsDataMapped = mapProductData(productsData)
-            setProducts(productsDataMapped)
-        })
+    //   fetch('https://fakestoreapi.com/products/')
+    //     .then(data => data.json())
+    //     .then(productsData => {
+    //         let productsDataMapped = mapProductData(productsData)
+    //         setProducts(productsDataMapped)
+    //     })
 
     //   MOCK DATA
-    // let productsDataMapped = mapProductData(productsData)
-    // setProducts(productsDataMapped)
+    let productsDataMapped = mapProductData(productsData)
+    setProducts(productsDataMapped)
     }, [])
   
     return { products }
