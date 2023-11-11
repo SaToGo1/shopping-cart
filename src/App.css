@@ -1,5 +1,6 @@
 .App {
     background-color: var(--main);
+    background-image: linear-gradient(to bottom right, var(--main), var(--main2));
     min-height: 20vh;
     align-items: center;
     color: var(--letter);

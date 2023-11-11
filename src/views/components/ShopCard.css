@@ -1,14 +1,15 @@
 .shop__card {
     --shopCard__margin-sides: 20px;
 
+    padding: 0px 0px 10px 0px;
     background-color: var(--base);
 
     /* border: 1px solid var(--accent); */
     border-radius: 10px;
     box-shadow: 0px 0px 10px 10px white;
 
-    height: 500px;
-    width: 500px;
+    height: auto;
+    width: 300px;
 
     display: flex;
     flex-direction: column;
