@@ -14,12 +14,15 @@
     box-shadow: 0px 0px 10px 10px var(--accent);
 
     transition: all 0.3s linear;
+
+    opacity: 0;
 }
 
-.cart-transition {
-    width: var(--cart-width);
-    transition: all 0.3s linear;
-}
+    .cart-transition {
+        width: var(--cart-width);
+        transition: width 0.3s linear;
+        opacity: 1;
+    }
 
 .cart__container {
     width: 100%;

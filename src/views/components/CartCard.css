@@ -12,7 +12,7 @@
     }
 
 .cart__imageDiv{
-    height: 100px;
+    max-height: 100px;
 
     overflow: hidden;
 
@@ -20,11 +20,12 @@
     align-items: center;
 
     border-radius: 10px;
+
+    transition: max-height 0.1s ease-in;
 }
 
     .cart__imageDiv-active{
-        overflow:visible;
-        height: auto;
+        max-height: 600px;
     }
 
 .cart__image {

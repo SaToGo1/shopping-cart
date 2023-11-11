@@ -47,6 +47,7 @@ header {
         outline: 1px solid var(--letter2);
     }
 
+/* Mobile */
 @media (max-width: 767px) {
     header {
         height: 5vh;
@@ -65,6 +66,7 @@ header {
     }
 }
 
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         height: 5vh;
@@ -80,5 +82,24 @@ header {
 
     .header__cart-open {
         width: calc(93% - var(--cart-width));
+    }
+}
+
+/* Mobile wide*/
+@media (max-height: 767px) {
+    header {
+        height: 12vh;
+    }
+
+    .header__h1 {
+        font-size: 1rem;
+    }
+
+    .header__p {
+        font-size: 1rem;
+    }
+
+    .header__cart-open {
+        width: 0%;
     }
 }

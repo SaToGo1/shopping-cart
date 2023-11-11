@@ -14,11 +14,22 @@ export default function useCart () {
   
     const handleCartDisplay = () => {
         const newCartVisibility = !isCartVisible
-        setIsCartVisible(newCartVisibility);
 
-        // this solves the problem of scrolling in mobile media in the shop
-        // with the cart open filling 100% of the screen.
+        // this solves the problem of scrolling in mobile media
+        // where you can scroll on the shop with the cart open.
         document.body.classList.toggle('cart-open');
+
+        // Cart Animation
+        const cartElement = document.querySelector('.cart');
+        if (cartElement) {
+            cartElement.classList.toggle('cart-transition');
+            cartElement.addEventListener('transitionend', () => {
+                setIsCartVisible(newCartVisibility);
+            })
+            return
+        }
+
+        setIsCartVisible(newCartVisibility);
     }
   
     const addToCart = (product) => {

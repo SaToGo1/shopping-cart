@@ -17,7 +17,7 @@ const Cart = () => {
                 cartElement.classList.toggle('cart-transition');
             }, 1)
         } else {
-            // cartElement.classList.toggle('cart-transition');
+        //     cartElement.classList.toggle('cart-transition-leaving');
         }
     }, [isCartVisible])
 

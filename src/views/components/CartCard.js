@@ -24,7 +24,7 @@ export default function CartCard ({ product, calculatePrice, deletePriceProduct 
     return (
         <>
             <li className='cartCard__li'>
-                <div className={isExpanded? 'cart__imageDiv-active' : 'cart__imageDiv'}>
+                <div className={`cart__imageDiv ${isExpanded? 'cart__imageDiv-active' : ''}`}>
                     <img 
                         className='cart__image'
                         alt={`${product.description}`}
