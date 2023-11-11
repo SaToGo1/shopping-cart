@@ -16,19 +16,16 @@
     .homePage__title {
         font-size: 8rem;
         text-shadow: 4px 4px 2px hsl(220, 13%, 10%), 0px 0px 0.1em var(--letter2);
-
     }
 
-    .homePage__imgDiv {
-        /* width: 400px;
-        height: 800px;
-        border: 1px solid white; */
-        
+    .homePage__imgDiv {        
         width: 700px;
         height: 350px;
         box-shadow: 0px 0px 4px 4px hsl(220, 13%, 10%);
 
         border-radius: 20px;
+
+        margin: 0px 0px 20px 0px;
     }
 
     .homePage__img {
@@ -49,7 +46,7 @@
     }
 }
   
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
     .homePage__img {
         width: 400px;
         height: 240px;
@@ -64,5 +61,10 @@
 @media (max-width: 1024px) {
     .homePage {
         min-height: 95vh;
+    }
+
+    .homePage__title {
+        font-size: 6rem;
+        text-shadow: 4px 4px 2px hsl(220, 13%, 10%), 0px 0px 0.1em var(--letter2);
     }
 }
