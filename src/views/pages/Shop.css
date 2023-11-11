@@ -63,3 +63,9 @@
 .shop-cartOpen {
     width: calc(100% - var(--cart-width));
 }
+
+@media (max-width: 767px) {
+    body.cart-open {
+        overflow: hidden;
+    }
+}

@@ -37,3 +37,32 @@
         border-radius: 20px;
     }
 
+@media (min-width: 481px) and (max-width: 767px) {
+    .homePage__img {
+        width: 500px;
+        height: 350px;
+    }
+
+    .homePage__imgDiv {        
+        width: 500px;
+        height: 350px;
+    }
+}
+  
+@media (min-width: 320px) and (max-width: 480px) {
+    .homePage__img {
+        width: 400px;
+        height: 240px;
+    }
+
+    .homePage__imgDiv {        
+        width: 400px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .homePage {
+        min-height: 95vh;
+    }
+}

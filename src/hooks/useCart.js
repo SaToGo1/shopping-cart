@@ -13,7 +13,12 @@ export default function useCart () {
     } = useContext(CartContext)
   
     const handleCartDisplay = () => {
-        setIsCartVisible(!isCartVisible);
+        const newCartVisibility = !isCartVisible
+        setIsCartVisible(newCartVisibility);
+
+        // this solves the problem of scrolling in mobile media in the shop
+        // with the cart open filling 100% of the screen.
+        document.body.classList.toggle('cart-open');
     }
   
     const addToCart = (product) => {
