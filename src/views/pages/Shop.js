@@ -27,7 +27,8 @@ const Shop = ({ products }) => {
     return (
         <main className={'shop ' + (isCartVisible ? 'shop-cartOpen' : ' ')}>
             <div className='shop-filters'>
-                    <select onChange={handleChange}>
+                    <label for='shop-categories' className='hide'>categories</label>
+                    <select id="shop-categories" onChange={handleChange}>
                         {
                             categories.map((category, i) => <option key={i} value={category}>{category}</option>)
                         }
